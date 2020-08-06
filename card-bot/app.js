@@ -94,7 +94,7 @@ if (isGetFirstCard=="Y"){
             }
         }
     }
-    else if (isMyTrumpKnown=="N"){ //My Trump
+    else if (isTrumpKnown=="N"){ //My Trump
         for (var i = 0; i < totalCardsOnHand; i++) {
             if (cardsOnHand[i].cardType!=trumpCard.cardType){
                 if (cardsOnHand[i].cardType=="J"){
