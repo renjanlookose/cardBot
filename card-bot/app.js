@@ -67,7 +67,7 @@ if (isGetFirstCard=="Y"){
     var isJackFound="N";
     if (isMyTrump=="N"){
         for (var i = 0; i < totalCardsOnHand; i++) {
-            if (cardsOnHand[i].cardType=="J"){
+            if (cardsOnHand[i].faceValue=="J"){
                 isJackFound="Y";
                 cardToPlay.cardType=cardsOnHand[i].cardType;
                 cardToPlay.faceValue=cardsOnHand[i].faceValue;
@@ -97,7 +97,7 @@ if (isGetFirstCard=="Y"){
     else if (isTrumpKnown=="N"){ //My Trump
         for (var i = 0; i < totalCardsOnHand; i++) {
             if (cardsOnHand[i].cardType!=trumpCard.cardType){
-                if (cardsOnHand[i].cardType=="J"){
+                if (cardsOnHand[i].faceValue=="J"){
                     isJackFound="Y";
                     cardToPlay.cardType=cardsOnHand[i].cardType;
                     cardToPlay.faceValue=cardsOnHand[i].faceValue;
@@ -116,7 +116,12 @@ if (isGetFirstCard=="Y"){
     var isStartingCardWithMe="N";
     for (var i = 0; i < totalCardsOnHand; i++) {
         if (cardsOnHand[i].cardType==startingCard.cardType){
-            if(isStartingCardWithMe=="N"){
+            if (cardsOnHand[i].faceValue=="J"){
+                cardToPlay.cardType=cardsOnHand[i].cardType;
+                cardToPlay.faceValue=cardsOnHand[i].faceValue;
+                isStartingCardWithMe="Y";
+            }
+            else if(isStartingCardWithMe=="N"){
                 cardToPlay.cardType=cardsOnHand[i].cardType;
                 cardToPlay.faceValue=cardsOnHand[i].faceValue;
                 isStartingCardWithMe="Y";
@@ -127,12 +132,14 @@ if (isGetFirstCard=="Y"){
                     if (isMyTeamIsWinning=="Y"){
                         cardToPlay.cardType=cardsOnHand[i].cardType;
                         cardToPlay.faceValue=cardsOnHand[i].faceValue;
+                        isStartingCardWithMe="Y";
                     }
                 }
                 else if(isLarge=="N"){
                     if (isMyTeamIsWinning=="N"){
                         cardToPlay.cardType=cardsOnHand[i].cardType;
                         cardToPlay.faceValue=cardsOnHand[i].faceValue;
+                        isStartingCardWithMe="Y";
                     }
                 }
             }
