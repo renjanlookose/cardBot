@@ -29,6 +29,7 @@ exports.lambdaHandler = async (event, context) => {
     var cardsOnHand = json.cardsOnHand;
     var totalCardsOnHand=cardsOnHand.length;
     let trumpCard = new Card();
+    // Todo @Thomas - pls refactor the get deal logic
     var myDeal=20;
     for (var i = 0; i < totalCardsOnHand; i++) {
         if (cardsOnHand[i].faceValue=="J"){
@@ -43,7 +44,7 @@ exports.lambdaHandler = async (event, context) => {
     }
     const response = {
         statusCode: 200,
-        body: JSON.stringify(trumpCard),
+        body: JSON.stringify(myDeal),
         headers: {
             "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
             "Access-Control-Allow-Credentials" : true, // Required for cookies, authorization headers with HTTPS 
