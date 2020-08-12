@@ -20,7 +20,7 @@ exports.lambdaHandler = async (event, context) => {
    var json = event;
     //exports.handler = async (event, context) => {
     //var json = JSON.parse(event.body);
-    console.log("Get Deal");
+    console.log("Get Deal one ");
     class Card{
         faceValue;
         cardType;
