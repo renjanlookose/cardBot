@@ -7,7 +7,7 @@
             "name": "cardBot:getFirstCard.lambdaHandler (nodejs12.x)",
             "invokeTarget": {
                 "target": "code",
-                "projectRoot": "",
+                "projectRoot": "card-bot/",
                 "lambdaHandler": "getFirstCard.lambdaHandler"
             },
             "lambda": {
@@ -22,7 +22,7 @@
             "name": "cardBot:getNextCard.lambdaHandler (nodejs12.x)",
             "invokeTarget": {
                 "target": "code",
-                "projectRoot": "",
+                "projectRoot": "card-bot/",
                 "lambdaHandler": "getNextCard.lambdaHandler"
             },
             "lambda": {
@@ -37,7 +37,7 @@
             "name": "cardBot:getTrumCard.lambdaHandler (nodejs12.x)",
             "invokeTarget": {
                 "target": "code",
-                "projectRoot": "",
+                "projectRoot": "card-bot/",
                 "lambdaHandler": "getTrumCard.lambdaHandler"
             },
             "lambda": {
@@ -52,7 +52,7 @@
             "name": "cardBot:getDeal.lambdaHandler (nodejs12.x)",
             "invokeTarget": {
                 "target": "code",
-                "projectRoot": "",
+                "projectRoot": "card-bot/",
                 "lambdaHandler": "getDeal.lambdaHandler"
             },
             "lambda": {
