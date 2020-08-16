@@ -12,7 +12,7 @@
             },
             "lambda": {
                 "runtime": "nodejs12.x",
-                "payload": {},
+                "payload": {"json": {"name":"thomas"}},
                 "environmentVariables": {}
             }
         },
